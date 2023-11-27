@@ -16,10 +16,25 @@ function randomGreetMessageGenerator() {
         'Salaam'
     ];
 
+    // Array that stores random names to be used in the greet messages
+    const names = [
+        'Bob',
+        'Alice',
+        'John',
+        'Jane',
+        'Jack',
+        'Jill',
+        'James',
+        'Judy',
+        'Joe',
+        'Jenny'
+    ];
+
     let set = new Set();
     for (let i = 0; i < 10; i++) {
         const randomIndex = Math.floor(Math.random() * greetMessages.length);
-        set.add(greetMessages[randomIndex]);
+        // Append random name along with the greet message
+        set.add(greetMessages[randomIndex] + " " + names[randomIndex]);
     }
     console.log(Array.from(set));
 }
